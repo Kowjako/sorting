@@ -36,11 +36,11 @@ int main() {
     }
     //SORTOWANIE PRZEZ WSTAWIANIE
     for(int i=1;i<SIZE;i++) {
-        int x = A[i];
         int j=i;
-        while(A[j-1]>x && j>0) {
-            A[j]=A[j-1];
-            A[j-1]=x;
+        while(A[j-1]>A[j] && j>0) {
+            int _tmp = A[j-1];
+            A[j-1]=A[j];
+            A[j]=_tmp;
             j--;
         }
     }
