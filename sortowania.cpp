@@ -35,15 +35,16 @@ int main() {
         A[indmax] = pozycja;
     }
     //SORTOWANIE PRZEZ WSTAWIANIE
-    for(int i=1;i<SIZE;i++) {
-        int j=i;
-        while(A[j-1]>A[j] && j>0) {
-            int _tmp = A[j-1];
-            A[j-1]=A[j];
-            A[j]=_tmp;
-            j--;
-        }
-    }
+    for (int i = 1; i < array.Length; i++)
+            {
+                int k = array[i];
+                int j = i;
+                while (j > 0 && array[j - 1] > k )
+                {
+                    Swap(ref array[j - 1], ref array[j]);
+                    j--;
+                }
+            }
     for(int i=0;i<SIZE;i++) cout<<A[i]<<" ";
     return 0;
 }
